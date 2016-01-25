@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /404.html
 Allow: /
-Sitemap: https://kuda.pro/sitemap.xml
-Host: https://kuda.pro
+Sitemap: https://new.kuda.pro/sitemap.xml
+Host: https://new.kuda.pro
