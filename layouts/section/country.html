@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<div class="section">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h1>Информация по странам</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Для вашего удобства мы создали каталог стран, в которые можем вас отправить. С краткой информацией по каждой стране.</p>
+        <table class="table">
+            <tbody>
+            {{ range .Data.Pages }}
+            <tr>
+                <td>
+                <img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag">
+                </td>
+                <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

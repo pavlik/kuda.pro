@@ -1,0 +1,13 @@
+<head>
+    <title>{{ with .Title }}{{ . }}{{ else }}{{ with .Site.Title }}{{ . }}{{ end }}{{ end }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}"/>
+    {{ if .Keywords }}<meta name="keywords" content="{{ delimit .Keywords ", " }}">
+    {{ else }}<meta name="keywords" content="{{ delimit .Site.Params.keywords ", " }}">{{ end }}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ $.Site.BaseURL }}/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="{{ $.Site.BaseURL }}/favicon.ico">
+</head>

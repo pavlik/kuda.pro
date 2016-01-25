@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<div class="section">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h1>Информация по туристическим направлениям в Российской Федерации</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>В последнее время набирает популярность внутренний туризм. На этой странице вы можете ознакомиться с направлениями по которым мы работаем в России.</p>
+        <table class="table">
+            <tbody>
+            {{ range .Data.Pages }}
+            <tr>
+                <td>
+                <img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag">
+                </td>
+                <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+            </tr>
+            {{ end }}
+            </tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

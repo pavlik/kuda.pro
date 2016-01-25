@@ -1,0 +1,214 @@
+{{ partial "header_index.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+   <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-primary">Наши преимущества</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h1 class="text-center text-success">
+                            <i class="fa fa-2x fa-fw fa-thumbs-up"></i>
+                        </h1>
+                        <h3 class="text-center">Только надежные туроператоры</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class="text-center text-muted">
+                            <i class="fa fa-2x fa-fw umbs-up fa-money"></i>
+                        </h1>
+                        <h3 class="text-center">Лучшие цены</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class="text-center">
+                            <i class="fa fa-2x fa-cc-visa fa-fw text-primary umbs-up"></i>
+                        </h1>
+                        <h3 class="text-center">Наличный и безналичный расчет</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <h1 class="text-center">
+                            <i class="fa fa-2x fa-fw fa-globe text-success umbs-up"></i>
+                        </h1>
+                        <h3 class="text-center">Оформление виз</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section"></div>
+        <div class="section section-success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-info text-left">Страны и цены</h1>
+                    </div>
+                </div>
+                <div class="row countries">
+                    <div class="col-md-3">
+                        <a href='{{ relref . "country/thailand.md" }}'><img src="{{ $baseurl }}/images/flags/thailand_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Тайланд</h3>
+                        <p>от 25 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href='{{ relref . "country/vietnam.md" }}'><img src="{{ $baseurl }}/images/flags/vietnam_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Вьетнам</h3>
+                        <p>от 35 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href='{{ relref . "country/greece.md" }}'><img src="{{ $baseurl }}/images/flags/greece_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Греция</h2>
+                        <p>от 20 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href='{{ relref . "country/cyprus.md" }}'><img src="{{ $baseurl }}/images/flags/cyprus_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Кипр</h2>
+                        <p>от 15 000 рублей</p>
+                    </div>
+                </div>
+                <div class="row countries">
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/united_arab_emirates_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Объединенные Арабские Эмираты</h3>
+                        <p>от 18 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/czech_republic_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Чехия</h3>
+                        <p>от 19 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/france_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Франция</h2>
+                        <p>от 38 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/spain_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Испания</h2>
+                        <p>от 14 000 рублей</p>
+                    </div>
+                </div>
+                <div class="row countries">
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/bali_flag.jpg" class="img-responsive img-thumbnail"></a>
+                        <h3>Бали</h3>
+                        <p>от 78 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/maldives_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Мальдивы</h3>
+                        <p>от 68 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/dominican_republic_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Доминиканская республика</h2>
+                        <p>от 50 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/cuba_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Куба</h2>
+                        <p>от 35 000 рублей</p>
+                    </div>
+                </div>
+                <div class="row countries">
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/mexico_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Мексика</h3>
+                        <p>от 64 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/israel_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Израиль</h3>
+                        <p>от 20 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/sri_lanka_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Шри-Ланка</h2>
+                        <p>от 37 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/italy_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Италия</h2>
+                        <p>от 18 000 рублей</p>
+                    </div>
+                </div>
+                <div class="row countries">
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/india_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>ГОА (Индия)</h3>
+                        <p>от 17 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/china_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h3>Китай</h3>
+                        <p>от 65 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/bulgaria_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Болгария</h2>
+                        <p>от 13 000 рублей</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a><img src="{{ $baseurl }}/images/flags/portugal_flag.gif" class="img-responsive img-thumbnail"></a>
+                        <h2>Португалия</h2>
+                        <p>от 56 000 рублей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-primary">Отзывы наших клиентов</h1>
+                        <br>
+                        {{ $mention := where .Data.Pages "Section" "mention" }}
+                        {{ range last 3 $mention }}
+                        <p class="lead">
+                            {{ .Content }}
+                            <b>{{ .Params.author }}</b>
+                            <br><br>
+                        </p>
+                        {{ end }}  
+                        
+                        <a href='{{ $baseurl }}/mention.html'>еще отзывы...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-info text-left">Наша команда</h1>
+                        <br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{ $baseurl }}/images/managers/alena.jpg" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">Алёна Турчина</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ $baseurl }}/images/managers/albina.jpg" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">Альбина Ягненкова</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="//pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">Татьяна Гнездышкина</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section map">
+            <div class="container-fluid">
+                <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=690Uahv1btQk_S1FLoyw6DDsNmicZlFm&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;sourceType=constructor"></script>
+            </div>
+        </div>
+
+
+{{ partial "footer.html" . }}

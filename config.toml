@@ -1,0 +1,30 @@
+baseurl = "https://kuda.pro"
+languageCode = "ru-RU"
+title = "Академия туризма - туристическое агентство в Анапе"
+uglyurls = true
+
+[params]
+	description = "Видеопроизводство. Видеопродакшн. Производство видео. Съёмка корпоративных фильмов, рекламных роликов и музыкальных клипов."
+	keywords = ["видеопроизводство", "видеопродакшн", "создание презентационных фильмов", "изготовление роликов", "создание рекламных роликов", "производство видео"]
+
+
+[[menu.main]]
+	name = "Главная"
+	url = "/"
+	weight = 20
+[[menu.main]]
+	name = "Страны"
+	url = "/country.html"
+	weight = 30
+[[menu.main]]
+	name = "Внутренний туризм"
+	url = "/domestic_travel.html"
+	weight = 40
+[[menu.main]]
+	name = "Отзывы"
+	url = "/mention.html"
+	weight = 50
+[[menu.main]]
+	name = "Блог"
+	url = "/blog.html"
+	weight = 60

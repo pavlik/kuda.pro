@@ -1,0 +1,32 @@
+<html>
+         {{ partial "head.html" . }}
+    <body>
+        <div class="cover">
+            <div class="navbar navbar-default text-white">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand"></a>
+                    </div>
+                    {{ partial "menu.html" . }}
+                </div>
+            </div>
+            <div class="cover-image" style="background-image : url('{{ $.Site.BaseURL }}/images/header_back.jpg')"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="{{ $.Site.BaseURL }}/images/logo_tranparent_turizm.png" class="center-block img-responsive">
+                        <h2 class="text-info">Туристическое агентство в Анапе</h2>
+                        <br>
+                        <br>
+                        <a class="btn btn-lg btn-success" onclick="jivo_api.open();">Оставьте заявку на подбор тура</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        

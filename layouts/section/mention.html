@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<div class="section">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h1>Отзывы наших клиентов</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>&nbsp;</p>
+            {{ range .Data.Pages }}
+            <p class="lead">
+                {{ .Content }}
+                <b>{{ .Params.author }}</b>
+                <br><br>
+            </p>
+            {{ end }}
+           
+        </div>
+    </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

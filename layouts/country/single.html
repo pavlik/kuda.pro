@@ -1,0 +1,77 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>{{ .Title }}</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            {{ .Content }}
+            <p><br><br><a class="btn btn-block btn-lg btn-success" onclick="jivo_api.open();">Оставьте заявку на подбор тура</a></p>
+          </div>
+          <div class="col-md-6">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Флаг</td>
+                  <td>
+                    <img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Полное название</td>
+                  <td>{{ .Params.full_title }}</td>
+                </tr>
+                <tr>
+                  <td>Бывшее название</td>
+                  <td>{{ .Params.past_title }}</td>
+                </tr>
+                <tr>
+                  <td>Столица</td>
+                  <td>{{ .Params.capital }}</td>
+                </tr>
+                <tr>
+                  <td>Регион</td>
+                  <td>{{ .Params.region }}</td>
+                </tr>
+                <tr>
+                  <td>Площадь</td>
+                  <td>{{ .Params.area }}</td>
+                </tr>
+                <tr>
+                  <td>Численность населения</td>
+                  <td>{{ .Params.population }}</td>
+                </tr>
+                <tr>
+                  <td>Форма правления</td>
+                  <td>{{ .Params.government }}</td>
+                </tr>
+                <tr>
+                  <td>Дорожное движение</td>
+                  <td>{{ .Params.road_traffic }}</td>
+                </tr>
+                <tr>
+                  <td>Виза (для граждан РФ)</td>
+                  <td>{{ .Params.visa }}</td>
+                </tr>
+                <tr>
+                  <td>Часовой пояс</td>
+                  <td>{{ .Params.timezone }}</td>
+                </tr>
+                <tr>
+                  <td>Валюта</td>
+                  <td>{{ .Params.currency }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <img src="{{ $baseurl }}/{{ .Params.photo }}" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+
+{{ partial "footer.html" . }}
