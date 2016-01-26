@@ -6796,3 +6796,7 @@ body {
   width: 30px;
   height: 17px;
 }
+
+.countries img {
+    max-width: 200px;
+}
