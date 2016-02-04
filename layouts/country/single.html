@@ -110,7 +110,7 @@
                 {{ $domestic := where .Site.Pages "Section" "domestic_travel" }}    
                 {{ range $domestic }}
                 <tr>
-                    <td><img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag"></td>
+                    <td>{{ if .Params.flag }}<img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag">{{ else }}<img src="{{ $baseurl }}/images/flags/russia_flag.png" class="img-responsive mini-flag">{{ end }}</td>
                     <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
                     <td>от {{ .Params.price_from }} рублей</td>
                 </tr>
