@@ -7,19 +7,16 @@ description = ""
 tags = ["domestic_travel"]
 series = []
 
+capital = ""
 flag = ""
 full_title = ""
-past_title = ""
-capital = ""
 region = ""
 area = ""
 population = ""
-government = ""
-road_traffic = ""
-visa = ""
 timezone = ""
-currency = ""
 photo = ""
+price_from = ""
+weight = 0
 
 
 +++

@@ -47,117 +47,41 @@
                     <div class="col-md-12">
                         <h1 class="text-info text-left">Страны и цены</h1>
                     </div>
-                </div>
-                <div class="row countries">
-                    <div class="col-md-3">
-                        <a href='{{ relref . "country/thailand.md" }}'><img src="{{ $baseurl }}/images/flags/thailand_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Тайланд</h3>
-                        <p>от 25 000 рублей</p>
+                </div>                
+                
+                {{ $cols := 4}}
+                {{ $colmd := div 12 $cols }}
+                {{ $countries := where .Data.Pages "Section" "country" }}     
+                {{ $ordered :=  first 8 $countries.ByWeight }} 
+                {{ $len := len $ordered }}
+                {{$extraRequired := mod (sub $cols (mod $len $cols)) $cols }}
+                <!-- Columns: {{ $cols}}, Elements: {{ $len }}, Extra Elements Required: {{$extraRequired}} -->               
+                                
+                {{ range $key, $value := $ordered }}
+                {{ $isLastElem := not (sub (sub $len 1) $key) }}
+                {{ if modBool $key $cols }}
+                <div class="row countries">  
+                    {{end}}
+                    <div class="col-md-{{$colmd}}">
+                        <a href='{{ .Permalink }}'><img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive img-thumbnail"></a>
+                        <h3>{{ .Title }}</h3>
+                        <p>от {{ .Params.price_from }} рублей</p>
                     </div>
-                    <div class="col-md-3">
-                        <a href='{{ relref . "country/vietnam.md" }}'><img src="{{ $baseurl }}/images/flags/vietnam_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Вьетнам</h3>
-                        <p>от 35 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a href='{{ relref . "country/greece.md" }}'><img src="{{ $baseurl }}/images/flags/greece_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Греция</h2>
-                        <p>от 20 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a href='{{ relref . "country/cyprus.md" }}'><img src="{{ $baseurl }}/images/flags/cyprus_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Кипр</h2>
-                        <p>от 15 000 рублей</p>
-                    </div>
-                </div>
-                <div class="row countries">
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/united_arab_emirates_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Объединенные Арабские Эмираты</h3>
-                        <p>от 18 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/czech_republic_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Чехия</h3>
-                        <p>от 19 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/france_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Франция</h2>
-                        <p>от 38 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/spain_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Испания</h2>
-                        <p>от 14 000 рублей</p>
+                    {{ if and $isLastElem $extraRequired }}
+                    {{range first $extraRequired .Site.Params.bootstrapCols}}
+                    <div class="col-md-{{$colmd}}"></div>
+                    {{end}}
+                    {{end}}
+                    {{ if or (modBool (add $key 1) $cols) $isLastElem }}
+                </div>{{end}}
+                {{end}}
+                       
+                <div class="row">
+                    <div class="col-md-12">
+                         <h3><a href='{{ $baseurl }}/country.html'>посмотреть весь список стран...</a></h3>
                     </div>
                 </div>
-                <div class="row countries">
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/bali_flag.jpg" class="img-responsive img-thumbnail"></a>
-                        <h3>Бали</h3>
-                        <p>от 78 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/maldives_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Мальдивы</h3>
-                        <p>от 68 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/dominican_republic_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Доминиканская республика</h2>
-                        <p>от 50 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/cuba_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Куба</h2>
-                        <p>от 35 000 рублей</p>
-                    </div>
-                </div>
-                <div class="row countries">
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/mexico_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Мексика</h3>
-                        <p>от 64 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/israel_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Израиль</h3>
-                        <p>от 20 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/sri_lanka_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Шри-Ланка</h2>
-                        <p>от 37 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/italy_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Италия</h2>
-                        <p>от 18 000 рублей</p>
-                    </div>
-                </div>
-                <div class="row countries">
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/india_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>ГОА (Индия)</h3>
-                        <p>от 17 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/china_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h3>Китай</h3>
-                        <p>от 65 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/bulgaria_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Болгария</h2>
-                        <p>от 13 000 рублей</p>
-                    </div>
-                    <div class="col-md-3">
-                        <a><img src="{{ $baseurl }}/images/flags/portugal_flag.gif" class="img-responsive img-thumbnail"></a>
-                        <h2>Португалия</h2>
-                        <p>от 56 000 рублей</p>
-                    </div>
-                </div>
+            
             </div>
         </div>
         <div class="section">
@@ -175,7 +99,7 @@
                         </p>
                         {{ end }}  
                         
-                        <a href='{{ $baseurl }}/mention.html'>еще отзывы...</a>
+                        <h3><a href='{{ $baseurl }}/mention.html'>еще отзывы...</a></h3>
                     </div>
                 </div>
             </div>

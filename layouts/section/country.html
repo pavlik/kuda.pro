@@ -11,17 +11,14 @@
     <div class="row">
         <div class="col-md-12">
             <p>Для вашего удобства мы создали каталог стран, в которые можем вас отправить. С краткой информацией по каждой стране.</p>
-        <table class="table">
-            <tbody>
-            {{ range .Data.Pages }}
+        <table class="table">                       
+            {{ range .Data.Pages.ByWeight }}
             <tr>
-                <td>
-                <img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag">
-                </td>
+                <td><img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag"></td>
                 <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                <td>от {{ .Params.price_from }} рублей</td>
             </tr>
-            {{ end }}
-            </tbody>
+            {{ end }}           
         </table>
         </div>
     </div>

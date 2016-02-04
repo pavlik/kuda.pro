@@ -18,7 +18,8 @@ tags = ["country"]
 timezone = "Круглый год: UTC+7"
 title = "Тайланд"
 visa = "Без визы (срок пребывания до 30 дней)"
-price_from = "от 25 000 рублей"
+price_from = "25 000"
+weight = 25000
 
 +++
 

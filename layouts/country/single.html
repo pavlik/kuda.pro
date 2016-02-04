@@ -16,59 +16,108 @@
           <div class="col-md-6">
             <table class="table">
               <tbody>
+                {{ if .Params.flag }}
                 <tr>
                   <td>Флаг</td>
                   <td>
                     <img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag">
                   </td>
                 </tr>
+                {{ end }}
+                {{ if .Params.price_from }}
+                <tr>
+                  <td>Стоимость отдыха</td>
+                  <td>от {{ .Params.price_from }} рублей</td>
+                </tr>
+                {{ end }}
+                {{ if .Params.full_title }}
                 <tr>
                   <td>Полное название</td>
                   <td>{{ .Params.full_title }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.past_title }}
                 <tr>
                   <td>Бывшее название</td>
                   <td>{{ .Params.past_title }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.capital }}
                 <tr>
                   <td>Столица</td>
                   <td>{{ .Params.capital }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.region }}
                 <tr>
                   <td>Регион</td>
                   <td>{{ .Params.region }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.area }}
                 <tr>
                   <td>Площадь</td>
                   <td>{{ .Params.area }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.population }}
                 <tr>
                   <td>Численность населения</td>
                   <td>{{ .Params.population }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.government }}
                 <tr>
                   <td>Форма правления</td>
                   <td>{{ .Params.government }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.road_traffic }}
                 <tr>
                   <td>Дорожное движение</td>
                   <td>{{ .Params.road_traffic }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.visa }}
                 <tr>
                   <td>Виза (для граждан РФ)</td>
                   <td>{{ .Params.visa }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.timezone }}
                 <tr>
                   <td>Часовой пояс</td>
                   <td>{{ .Params.timezone }}</td>
                 </tr>
+                {{ end }}
+                {{ if .Params.currency }}
                 <tr>
                   <td>Валюта</td>
                   <td>{{ .Params.currency }}</td>
                 </tr>
+                {{ end }}
               </tbody>
             </table>
+            {{ if .Params.photo }}
             <img src="{{ $baseurl }}/{{ .Params.photo }}" class="img-responsive">
+            {{ end }}
+            <!-- Список внутренних направлений -->
+            {{ if eq .Title "Россия" }}
+            <h3>Популярные направления</h3>      
+            <table class="table">
+                <tbody>
+                    
+                {{ $domestic := where .Site.Pages "Section" "domestic_travel" }}    
+                {{ range $domestic }}
+                <tr>
+                    <td><img src="{{ $baseurl }}/{{ .Params.flag }}" class="img-responsive mini-flag"></td>
+                    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
+                    <td>от {{ .Params.price_from }} рублей</td>
+                </tr>
+                {{ end }}                
+                </tbody>
+            </table>
+            {{ end }}
           </div>
         </div>
       </div>
