@@ -8,13 +8,13 @@ full_title = ""
 keywords = []
 photo = "images/countries/russia/volga.jpg"
 population = ""
-price_from = ""
+price_from = "3 990"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Поволжье"
-weight = 0
+weight = 3990
 
 +++
 

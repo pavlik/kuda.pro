@@ -8,13 +8,13 @@ full_title = "Абха́зия"
 keywords = []
 photo = "images/countries/russia/abhazia.jpg"
 population = "240 705 человек"
-price_from = ""
+price_from = "7000"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = "MSK (UTC+3)"
 title = "Абхазия"
-weight = 0
+weight = 7000
 
 +++
 

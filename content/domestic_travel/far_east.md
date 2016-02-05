@@ -8,13 +8,13 @@ full_title = "Да́льний Восто́к Росси́и"
 keywords = []
 photo = "images/countries/russia/far_east.jpg"
 population = "6,3 млн человек"
-price_from = ""
+price_from = "49 800"
 region = "Дальневосточный"
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Дальний восток"
-weight = 0
+weight = 49800
 
 +++
 

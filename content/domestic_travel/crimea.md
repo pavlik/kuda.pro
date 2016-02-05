@@ -8,13 +8,13 @@ full_title = "Республика Крым"
 keywords = []
 photo = "images/countries/russia/crimea.jpg"
 population = "2 284 400 человек"
-price_from = ""
+price_from = "7 800"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Крым"
-weight = 0
+weight = 7800
 
 +++
 

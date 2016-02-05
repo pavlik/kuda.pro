@@ -8,13 +8,13 @@ full_title = ""
 keywords = []
 photo = "images/countries/russia/ural.jpg"
 population = ""
-price_from = ""
+price_from = "6 500"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Урал"
-weight = 0
+weight = 6500
 
 +++
 

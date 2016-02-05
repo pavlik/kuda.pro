@@ -7,13 +7,13 @@ full_title = "Краснода́рский край (Куба́нь)"
 keywords = []
 photo = "images/countries/russia/kuban.jpg"
 population = "5 514 250 человек"
-price_from = "0"
+price_from = "1000"
 region = "Южный"
 series = []
 tags = ["domestic_travel"]
 timezone = "MSK (UTC+3)"
 title = "Краснодарский край"
-weight = 0
+weight = 1000
 
 +++
 

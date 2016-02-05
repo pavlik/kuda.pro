@@ -8,13 +8,13 @@ full_title = "Се́верный Кавка́з"
 keywords = []
 photo = "images/countries/russia/kavkaz.jpg"
 population = ""
-price_from = "0"
+price_from = "7 500"
 region = "юг Европейской части России"
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Северный Кавказ"
-weight = 0
+weight = 7500
 
 +++
 

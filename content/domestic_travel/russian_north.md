@@ -8,13 +8,13 @@ full_title = ""
 keywords = []
 photo = "images/countries/russia/russian_north.jpg"
 population = ""
-price_from = ""
+price_from = "4 700"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Русский север"
-weight = 0
+weight = 4700
 
 +++
 

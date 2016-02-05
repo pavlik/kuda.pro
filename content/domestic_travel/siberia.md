@@ -8,13 +8,13 @@ full_title = "Сибирь"
 keywords = []
 photo = "images/countries/russia/siberia.jpg"
 population = "39,13 млн человек"
-price_from = ""
+price_from = "14 500"
 region = "Сибирский"
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Сибирь"
-weight = 0
+weight = 14500
 
 +++
 

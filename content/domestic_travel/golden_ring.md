@@ -8,13 +8,13 @@ full_title = "Золотое кольцо России"
 keywords = []
 photo = "images/countries/russia/golden_ring.jpg"
 population = ""
-price_from = ""
+price_from = "11 000"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = ""
 title = "Золотое кольцо"
-weight = 0
+weight = 11000
 
 +++
 

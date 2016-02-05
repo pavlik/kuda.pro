@@ -8,13 +8,13 @@ full_title = "Санкт-Петербу́рг"
 keywords = []
 photo = "images/countries/russia/saint_petersburg.jpg"
 population = "5 222 347 человек"
-price_from = ""
+price_from = "4 690"
 region = ""
 series = []
 tags = ["domestic_travel"]
 timezone = "UTC+3"
 title = "Санкт-Петербург"
-weight = 0
+weight = 4690
 
 +++
 
