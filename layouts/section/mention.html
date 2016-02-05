@@ -14,7 +14,7 @@
             {{ range .Data.Pages }}
             <p class="lead">
                 {{ .Content }}
-                <b>{{ .Params.author }}</b>
+                <b>{{ .Params.author }}</b>&nbsp;&nbsp;&nbsp;{{ .Date.Format  "02.01.2006" }}
                 <br><br>
             </p>
             {{ end }}

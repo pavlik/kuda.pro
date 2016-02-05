@@ -91,7 +91,7 @@
                         <h1 class="text-primary">Отзывы наших клиентов</h1>
                         <br>
                         {{ $mention := where .Data.Pages "Section" "mention" }}
-                        {{ range last 3 $mention }}
+                        {{ range first 3 $mention }}
                         <p class="lead">
                             {{ .Content }}
                             <b>{{ .Params.author }}</b>
